@@ -4,6 +4,11 @@ import * as path from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.ts"),
@@ -17,6 +22,7 @@ export default defineConfig({
         globals: {
           react: "React",
         },
+        banner: '"use client";',
       },
     },
 
@@ -25,7 +31,6 @@ export default defineConfig({
     },
 
     ssr: true,
-    ssrManifest: true,
   },
 
   plugins: [react(), dts()],
