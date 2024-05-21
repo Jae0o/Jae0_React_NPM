@@ -1,6 +1,6 @@
 {
-  "name": "@jae0/react",
-  "version": "0.0.18",
+  "name": "@jae0brary/react",
+  "version": "0.0.2",
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
