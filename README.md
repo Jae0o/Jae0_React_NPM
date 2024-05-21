@@ -2,7 +2,7 @@
 
 React의 다양한 Hook, Component들을 제공하는 라이브러리입니다.<br>
 
-[🔗 다양한 JavaScript TypeScript Util 라이브러리](https://www.npmjs.com/package/@jae0brary/react)
+[🔗 다양한 JavaScript TypeScript Util 라이브러리](https://www.npmjs.com/package/@jae0brary/utils)
 
 ## Install
 
