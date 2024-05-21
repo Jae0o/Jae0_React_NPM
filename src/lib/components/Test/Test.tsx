@@ -1,21 +1,8 @@
 import { TestProps } from "./Test.type";
-import "./Test.css";
+import * as S from "./Test.style";
 
-const Test = ({ className }: TestProps) => {
-  return (
-    <div
-      className={`test` + className}
-      style={{
-        fontSize: "16px",
-        fontWeight: "700",
-
-        borderRadius: "8px",
-        color: "white",
-      }}
-    >
-      Test
-    </div>
-  );
+const Test = ({ ...rest }: TestProps) => {
+  return <S.TestComponent {...rest}>Test</S.TestComponent>;
 };
 
 export default Test;

@@ -1,3 +1,3 @@
-export interface TestProps {
-  className?: string;
-}
+import { HTMLAttributes } from "react";
+
+export interface TestProps extends HTMLAttributes<HTMLDivElement> {}

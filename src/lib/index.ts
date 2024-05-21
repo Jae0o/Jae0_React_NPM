@@ -1,4 +1,4 @@
-import { default as JaePonent } from "./components";
-import { default as JaeHook } from "./hooks";
+import Test from "./components/Test/Test";
+import useToggle from "./hooks/useToggle/useToggle";
 
-export { JaePonent, JaeHook };
+export { Test, useToggle };
