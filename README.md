@@ -16,10 +16,10 @@ yarn add @jae0brary/react
 
 ## Use
 
-`EMS` 방식과 `CJS` 방식 모두 사용가능합니다.
+`EMS` 방식과 `CJS` 방식 모두 사용 가능합니다.
 
 ```jsx
-import {} from "@jae0brary/react";
+import { components, hooks } from "@jae0brary/react";
 
 // or
 
@@ -51,7 +51,7 @@ toggle을 통한 상태를 관리하기 위한 hook입니다.<br>
 
 ### use
 
-useToggle의 인수로 Boolean값을 전달해 초기 상태를 지정할 수 있습니다.<br>
+useToggle의 인수로 Boolean 값을 전달해 초기 상태를 지정할 수 있습니다.<br>
 
 `( default : false )`
 
@@ -60,8 +60,7 @@ useToggle의 인수로 Boolean값을 전달해 초기 상태를 지정할 수 �
 ```jsx
 import { useToggle } from "@jae0brary/react";
 
-const { isToggle, handleToggle, handleToggleOn, handleToggleOff } =
-  useToggle(true);
+const { isToggle, handleToggle, handleToggleOn, handleToggleOff } = useToggle(true);
 ```
 
 ### return
@@ -90,11 +89,11 @@ const { isToggle, handleToggle, handleToggleOn, handleToggleOff } =
  <hr>
  <br>
 
-Session & Local Storage에 쉽게 접근하여 데이터를 저장하고 꺼내기 위한 hook 입니다.
+Session & Local Storage에 쉽게 접근하여 데이터를 저장하고 꺼내기 위한 hook입니다.
 
 ### use
 
-TypeScript를 사용하시는 경우 `Generics Type`을 통해 데이터 Storage속 데이터의 타입을 전달하실 수 있습니다.
+TypeScript를 사용하시는 경우 `Generics Type`을 통해 데이터 Storage 속 데이터의 타입을 전달하실 수 있습니다.
 
 - **param : key**<br>
   Session & Local Storage에 접근할 `key` 값을 전달받습니다.
@@ -105,7 +104,7 @@ TypeScript를 사용하시는 경우 `Generics Type`을 통해 데이터 Storage
   <br>
 
 ```ts
-import { useSessionStorage, useLocalStorage } from "@jae0brary/react";
+import { useLocalStorage, useSessionStorage } from "@jae0brary/react";
 
 const {
   data,
