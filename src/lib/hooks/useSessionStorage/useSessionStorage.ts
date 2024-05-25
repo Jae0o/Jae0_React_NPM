@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+
 import {
   SetSessionStorage,
   UseSessionStorage,
@@ -54,7 +55,7 @@ const useSessionStorage: UseSessionStorage = <T>({
   });
 
   const setSessionStorage: SetSessionStorage<T> = useCallback(
-    (newData) => {
+    newData => {
       try {
         const stringifiedData = JSON.stringify(newData);
         sessionStorage.setItem(key, stringifiedData);
@@ -66,7 +67,7 @@ const useSessionStorage: UseSessionStorage = <T>({
         return initialData;
       }
     },
-    [initialData, key]
+    [initialData, key],
   );
 
   const removeSessionStorage = useCallback(() => {

@@ -31,7 +31,7 @@ const useToggle = (defaultValue: boolean = false) => {
   }, []);
 
   const handleToggle = useCallback(() => {
-    setIsToggle((prevState) => !prevState);
+    setIsToggle(prevState => !prevState);
   }, []);
 
   return {
