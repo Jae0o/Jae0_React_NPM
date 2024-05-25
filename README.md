@@ -23,7 +23,7 @@ import { components, hooks } from "@jae0brary/react";
 
 // or
 
-const {} = require("@jae0brary/react");
+const { components, hooks } = require("@jae0brary/react");
 ```
 
 <br>
@@ -143,6 +143,9 @@ removeSessionStorage();
 
 - **0.0.1** <br>
   useToggle 추가
+
+- **0.0.4** <br>
+  useSessionStorage, useLocalStorage 추가
 
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
