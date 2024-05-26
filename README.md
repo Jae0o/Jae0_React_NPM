@@ -2,7 +2,11 @@
 
 React의 다양한 Hook, Component들을 제공하는 라이브러리입니다.<br>
 
-[🔗 다양한 JavaScript TypeScript Util 라이브러리](https://www.npmjs.com/package/@jae0brary/utils)
+<small>[🔗 다양한 JavaScript TypeScript Util 라이브러리](https://www.npmjs.com/package/@jae0brary/utils)</small>
+
+<br>
+
+## [🔗 Storybook을 통한 설명 & 체험!](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/)
 
 ## Install
 
@@ -46,6 +50,8 @@ Modal UI를 편하게 사용할 수 있도록 구현한 Modal Component입니다
 ( 해당 기능은 Option을 통해 off 할 수 있습니다. )
 
 ### use
+
+[🔗 Modal - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/?path=/docs/components-modal--docs)<br>
 
 Modal은 `useModal hook`과 함께 사용하여 useModal 내부의 값을 Modal에 전달하여 사용할 수 있습니다.<br>
 
