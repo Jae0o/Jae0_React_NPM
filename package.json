@@ -1,6 +1,6 @@
 {
   "name": "@jae0brary/react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
@@ -18,7 +18,8 @@
     "preview": "vite preview",
     "publish": "npm run build && npm publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_a58e0cde18f472a"
   },
   "dependencies": {
     "framer-motion": "^11.2.6",
@@ -43,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.4.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
