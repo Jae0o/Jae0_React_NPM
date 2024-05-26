@@ -9,8 +9,6 @@ const useGetModalPosition = ({ isShow }: UseGetModalPositionProps) => {
     setWindowHeight(window.scrollY);
   }, [isShow]);
 
-  console.log(windowHeight);
-
   return { windowHeight };
 };
 
