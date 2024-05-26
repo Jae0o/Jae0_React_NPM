@@ -1,6 +1,6 @@
 {
   "endOfLine": "lf",
-  "printWidth": 100,
+  "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -10,8 +10,8 @@
   "jsxSingleQuote": false,
   "trailingComma": "all",
   "bracketSpacing": true,
-  "bracketSameLine": true,
-  "jsxBracketSameLine": true,
+  "bracketSameLine": false,
+  "jsxBracketSameLine": false,
   "arrowParens": "avoid",
 
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
