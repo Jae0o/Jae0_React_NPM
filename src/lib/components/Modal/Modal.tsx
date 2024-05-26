@@ -2,13 +2,13 @@ import { CloseIcon } from "../Icons";
 import * as S from "./Modal.style";
 import { ModalProps } from "./Modal.type";
 import { ModalPortal } from "./components";
-import { useGetModalPosition, useHandleCloseModal } from "./hooks";
+import { useGetModalPosition, useHandleClickModal } from "./hooks";
 
 import { AnimatePresence } from "framer-motion";
 
 const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProps) => {
   const { windowHeight } = useGetModalPosition({ isShow });
-  const handleCloseModal = useHandleCloseModal(onClose);
+  const handleCloseModal = useHandleClickModal(onClose);
 
   return (
     <AnimatePresence>

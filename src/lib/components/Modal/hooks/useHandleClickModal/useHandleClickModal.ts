@@ -1,8 +1,8 @@
 import { MouseEvent } from "react";
 
-import { UseHandleCloseModalCallback } from "./useHandleCloseModal.type";
+import { useHandleClickModalCallback } from "./useHandleCloseModal.type";
 
-const useHandleCloseModal = (onClose: UseHandleCloseModalCallback) => {
+const useHandleClickModal = (onClose: useHandleClickModalCallback) => {
   const handleCloseModal = ({ target, currentTarget }: MouseEvent) => {
     if (target !== currentTarget) {
       return;
@@ -14,4 +14,4 @@ const useHandleCloseModal = (onClose: UseHandleCloseModalCallback) => {
   return handleCloseModal;
 };
 
-export default useHandleCloseModal;
+export default useHandleClickModal;
