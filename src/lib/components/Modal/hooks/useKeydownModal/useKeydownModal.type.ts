@@ -1,1 +1,4 @@
-export type UseKeydownModalCallback = () => void;
+export interface UseKeydownModalProps {
+  isShow: boolean;
+  onClose: () => void;
+}

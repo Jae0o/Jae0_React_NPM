@@ -1,15 +1,27 @@
-import { UseKeydownModalCallback } from "./useKeydownModal.type";
+import { useEffect, useRef } from "react";
 
-const useKeydownModal = (onClose: UseKeydownModalCallback) => {
-  const handleKeydownModal = ({ key }: KeyboardEvent) => {
-    if (key !== "Escape") {
+import { UseKeydownModalProps } from "./useKeydownModal.type";
+
+const useKeydownModal = ({ onClose, isShow }: UseKeydownModalProps) => {
+  const handleCloseModal = useRef(onClose);
+
+  useEffect(() => {
+    if (!isShow) {
       return;
     }
 
-    onClose();
-  };
+    const handleEvent = ({ key }: KeyboardEvent) => {
+      if (key !== "Escape") {
+        return;
+      }
 
-  return handleKeydownModal;
+      handleCloseModal.current();
+    };
+
+    window.addEventListener("keydown", handleEvent);
+
+    return () => window.removeEventListener("keydown", handleEvent);
+  }, [isShow]);
 };
 
 export default useKeydownModal;
