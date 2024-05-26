@@ -1,6 +1,6 @@
 {
   "name": "@jae0brary/react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
@@ -71,7 +71,8 @@
     "component",
     "ui",
     "modal",
-    "util"
+    "util",
+    "storybook"
   ],
   "bugs": {
     "email": "leey153@naver.com"
