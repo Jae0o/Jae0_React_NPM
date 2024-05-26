@@ -6,7 +6,7 @@ React의 다양한 Hook, Component들을 제공하는 라이브러리입니다.<
 
 <br>
 
-## [🔗 Storybook을 통한 설명 & 체험!](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/)
+## [📕 Storybook을 통한 설명 & 체험!](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/)
 
 ## Install
 
@@ -51,7 +51,7 @@ Modal UI를 편하게 사용할 수 있도록 구현한 Modal Component입니다
 
 ### use
 
-[🔗 Modal - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/?path=/docs/components-modal--docs)<br>
+[📕 Modal - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/?path=/docs/components-modal--docs)<br>
 
 Modal은 `useModal hook`과 함께 사용하여 useModal 내부의 값을 Modal에 전달하여 사용할 수 있습니다.<br>
 
@@ -150,7 +150,7 @@ toggle을 통한 상태를 관리하기 위한 hook입니다.<br>
 
 ### use
 
-[🔗 useToggle - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-usetoggle--docs)<br>
+[📕 useToggle - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-usetoggle--docs)<br>
 
 useToggle의 인수로 Boolean 값을 전달해 초기 상태를 지정할 수 있습니다.<br>
 
@@ -311,7 +311,7 @@ return (
 
 ### use
 
-[🔗 useClickAway - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-useclickaway--docs)<br>
+[📕 useClickAway - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-useclickaway--docs)<br>
 
 useClickAway hook의 인수로 callback 함수를 전달합니다.<br>
 이후 useClickAway hook이 반환하는 ref를 대상 요소의 ref에 전달홥니다.<br>
