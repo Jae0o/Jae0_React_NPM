@@ -6,10 +6,18 @@ import { useAwayClickModal, useGetModalPosition, useKeydownModal } from "./hooks
 
 import { AnimatePresence } from "framer-motion";
 
-const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProps) => {
+const Modal = ({
+  children,
+  isShow,
+  onClose,
+  hideCloseIcon = false,
+  disableAwayClick = false,
+  backgroundStyle,
+  zIndex,
+}: ModalProps) => {
   const { windowHeight } = useGetModalPosition({ isShow });
   const handleCloseModal = useAwayClickModal(onClose);
-  useKeydownModal({ onClose, isShow });
+  useKeydownModal({ onClose, isShow, disableAwayClick });
 
   return (
     <AnimatePresence>
@@ -19,7 +27,7 @@ const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProp
             style={backgroundStyle}
             $zIndex={zIndex}
             $top={windowHeight}
-            onClick={handleCloseModal}
+            onClick={event => !disableAwayClick && handleCloseModal(event)}
             initial={{
               opacity: 0,
             }}
@@ -31,6 +39,7 @@ const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProp
             }}
           >
             <S.ModalLayout
+              $hideIcon={hideCloseIcon}
               initial={{
                 opacity: 0,
                 scale: 0,
@@ -44,17 +53,19 @@ const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProp
                 scale: 0,
               }}
             >
-              <S.ModalCloseIcon
-                onClick={onClose}
-                whileTap={{
-                  scale: 1.2,
-                }}
-                whileHover={{
-                  opacity: 0.4,
-                }}
-              >
-                <CloseIcon size="100%" />
-              </S.ModalCloseIcon>
+              {!hideCloseIcon && (
+                <S.ModalCloseIcon
+                  onClick={onClose}
+                  whileTap={{
+                    scale: 1.2,
+                  }}
+                  whileHover={{
+                    opacity: 0.4,
+                  }}
+                >
+                  <CloseIcon size="100%" />
+                </S.ModalCloseIcon>
+              )}
 
               {children}
             </S.ModalLayout>

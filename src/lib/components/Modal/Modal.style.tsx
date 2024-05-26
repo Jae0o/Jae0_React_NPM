@@ -19,9 +19,11 @@ export const ModalBackground = styled(motion.section)<{ $zIndex?: number; $top: 
   z-index: ${({ $zIndex }) => $zIndex || 500};
 `;
 
-export const ModalLayout = styled(motion.article)`
+export const ModalLayout = styled(motion.article)<{ $hideIcon: boolean }>`
+  min-height: 4rem;
+  min-width: 4rem;
   padding: 1rem;
-  padding-top: 2rem;
+  padding-top: ${({ $hideIcon }) => ($hideIcon ? "1rem" : "2rem")};
 
   display: flex;
   justify-content: end;

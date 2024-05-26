@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 
 import { UseKeydownModalProps } from "./useKeydownModal.type";
 
-const useKeydownModal = ({ onClose, isShow }: UseKeydownModalProps) => {
+const useKeydownModal = ({ onClose, isShow, disableAwayClick }: UseKeydownModalProps) => {
   const handleCloseModal = useRef(onClose);
 
   useEffect(() => {
-    if (!isShow) {
+    if (!isShow || disableAwayClick) {
       return;
     }
 
@@ -21,7 +21,7 @@ const useKeydownModal = ({ onClose, isShow }: UseKeydownModalProps) => {
     window.addEventListener("keydown", handleEvent);
 
     return () => window.removeEventListener("keydown", handleEvent);
-  }, [isShow]);
+  }, [disableAwayClick, isShow]);
 };
 
 export default useKeydownModal;
