@@ -34,6 +34,95 @@ const { components, hooks } = require("@jae0brary/react");
 
 <br>
 
+<details>
+  <summary style="font-size:18px"><b>Modal UI</b></summary>
+ <hr>
+ <br>
+
+Modal UI를 편하게 사용할 수 있도록 구현한 Modal Component입니다.<br>
+기본적으로 `AwayClick`, `Escape key`를 이용한 Modal 닫기 기능을 제공합니다.<br>
+( 해당 기능은 Option을 통해 off 할 수 있습니다. )
+
+### use
+
+Modal은 `useModal hook`과 함께 사용하여 useModal 내부의 값을 Modal에 전달하여 사용할 수 있습니다.<br>
+
+- **isShow Props**에 useModal hook 내부 isShow를 전달합니다.
+- **onClose Props**에 useModal hook 내부 handleCloseModal 전달합니다.
+
+<br>
+
+`handleShowModal`를 호출하여 Modal을 나타낼 수 있습니다.
+
+<br>
+
+```tsx
+import { Modal, useModal } from "@jae0brary/react";
+
+const {
+  isShow, // Modal Component의 isShow Prop에 전달합니다.
+  handleShowModal, // Modal을 활성화시킬 때 호출합니다.
+  handleCloseModal // Modal Component의 onClose Prop에 전달합니다.
+} = useModal();
+
+return (
+  <Modal
+    isShow={isShow}
+    onClose={handleCloseModal}
+
+    // Optional
+    hideCloseIcon={false}
+    disableAwayClick={false}
+    backgroundStyle={/* CSS style */}
+    modalStyle={/* CSS style */}
+    zIndex={500}
+  >
+
+    /* children */
+
+  </Modal>
+)
+```
+
+### Props
+
+- **isShow**<br>
+  useModal의 `isShow` 값을 전달받습니다.
+
+- **onClose**<br>
+  useModal의 `handleCloseModal` 메서드를 전달받습니다.
+
+- **hideCloseIcon ( optional )**<br>
+  true 전달 시 기본 스타일 `Close Icon`을 비활성화합니다.
+
+- **disableAwayClick ( optional )**<br>
+  true 전달 시 `Away Click`을 통한 Modal close 기능을 비활성화합니다.
+
+- **backgroundStyle ( optional )**<br>
+  Modal의 background의 스타일을 변경하기 위해 `CSS style` 값을 전달받습니다.
+
+- **modalStyle ( optional )**<br>
+  Modal의 스타일을 변경하기 위해 `CSS style` 값을 전달받습니다.
+
+- **zIndex ( optional )**<br>
+  필요한 경우 Modal의 `z-index` 값을 제어하기 위해 사용할 수 있습니다.
+
+### type
+
+- **isShow** : `boolean`
+- **onClose** : `() => void`
+
+<br>
+
+- **hideCloseIcon ( optional )** : `boolean`
+- **disableAwayClick ( optional )** : `boolean`
+- **backgroundStyle ( optional )** : `CSSProperties`
+- **modalStyle ( optional )** : `CSSProperties`
+- **zIndex ( optional )** : `number`
+
+ <hr>
+</details>
+
 <br>
 
 ## Hooks
@@ -146,6 +235,9 @@ removeSessionStorage();
 
 - **0.0.4** <br>
   useSessionStorage, useLocalStorage 추가
+
+- **0.0.5** <br>
+  Modal, useModal 추가
 
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
