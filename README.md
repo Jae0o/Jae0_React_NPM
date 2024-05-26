@@ -34,6 +34,8 @@ const { components, hooks } = require("@jae0brary/react");
 
 <br>
 
+<!---------------------------------------- Modal UI ---------------------------------------------->
+
 <details>
   <summary style="font-size:18px"><b>Modal UI</b></summary>
  <hr>
@@ -125,11 +127,13 @@ return (
 
 <br>
 
+<!------- Hooks ---------------------------------------------->
+
 ## Hooks
 
 <br>
 
-<!-- useToggle -->
+<!---------------------------------------- useToggle ---------------------------------------------->
 
 <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
@@ -171,7 +175,7 @@ const { isToggle, handleToggle, handleToggleOn, handleToggleOff } = useToggle(tr
 
 <br>
 
-<!-- useSessionStorage useLocalStorage -->
+<!-------------------------------- useSession Local Storage ------------------------------------>
 
 <details>
   <summary style="font-size:18px"><b>useSessionStorage & useLocalStorage</b></summary>
@@ -226,18 +230,140 @@ removeSessionStorage();
 
 <br>
 
+<!---------------------------------------- useModal ---------------------------------------------->
+
+<details>
+  <summary style="font-size:18px"><b>useModal</b></summary>
+ <hr>
+ <br>
+
+Modal UI의 상태 관리를 위해 사용하는 hook 입니다.
+
+### use
+
+Modal UI Component와 함께 사용가능합니다.<br>
+
+아래 예시를 참고하여 Modal UI Component의 Prop에 값을 전달합니다.
+
+  <br>
+
+```tsx
+import { Modal, useModal } from "@jae0brary/react";
+
+const {
+  isShow, // Modal Component의 isShow Prop에 전달합니다.
+  handleShowModal, // Modal을 활성화시킬 때 호출합니다.
+  handleCloseModal // Modal Component의 onClose Prop에 전달합니다.
+} = useModal();
+
+return (
+  <Modal
+    isShow={isShow}
+    onClose={handleCloseModal}
+
+    // Optional
+    hideCloseIcon={false}
+    disableAwayClick={false}
+    backgroundStyle={/* CSS style */}
+    modalStyle={/* CSS style */}
+    zIndex={500}
+  >
+
+    /* children */
+
+  </Modal>
+)
+```
+
+### return
+
+- **isShow** : Modal Component의 isShow Prop에 전달합니다.
+- **handleShowModal** : Modal을 활성화시킬 때 호출합니다.
+- **handleCloseModal** : Modal Component의 onClose Prop에 전달합니다.
+
+### type
+
+- **isShow** : `T`
+- **handleShowModal** : `() => void`
+- **handleCloseModal** : `() => void`
+
+ <hr>
+</details>
+
+<br>
+
+<!---------------------------------------- useModal ---------------------------------------------->
+
+<details>
+  <summary style="font-size:18px"><b>useAwayClick</b></summary>
+ <hr>
+ <br>
+
+특정 UI ( 요소 ) 외 다른 UI( 요소 )를 클릭하는 경우에 대해 컨트롤할 수 있는 hook 입니다.
+
+### use
+
+useClickAway hook의 인수로 callback 함수를 전달합니다.<br>
+이후 useClickAway hook이 반환하는 ref를 대상 요소의 ref에 전달홥니다.<br>
+( TypeScript 사용 시, `useClickAway<T>(callback)` 제네릭 타입을 통해 ref의 타입을 전달합니다. )<br>
+
+- **callback**<br>
+  다른 UI를 클릭했을 경우 실행될 callback 함수를 전달받습니다.<br>
+  ( **type** : `( e? : MouseEvent, TouchEvent ) => void` )
+
+  <br>
+
+```tsx
+import { useClickAway } from "@jae0brary/react";
+
+const handler = () => {
+
+  /* ... action */
+
+}
+
+const ref = useClickAway<HTMLButtonElement>(handler);
+
+return (
+  <>
+    {/* other components */}
+
+    <div ref={ref}>
+      Click!
+    </div>
+
+    {/* other components */}
+
+  </>
+)
+```
+
+### return
+
+- **ref** : Click Away의 대상 요소에 전달할 ref입니다.
+
+### type
+
+- **ref** : `MutableRefObject<T | null>`
+
+ <hr>
+</details>
+
+<br>
+
 <br>
 
 ## Version
 
 - **0.0.1** <br>
-  useToggle 추가
+  **hooks** : useToggle 추가
 
 - **0.0.4** <br>
-  useSessionStorage, useLocalStorage 추가
+  **hooks** : useSessionStorage, useLocalStorage 추가
 
 - **0.0.5** <br>
-  Modal, useModal 추가
+  **Components** : Modal 추가<br>
+  **Hooks** : useModal, useClickAway 추가
 
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
