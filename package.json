@@ -52,7 +52,9 @@
     "hook",
     "react",
     "component",
-    "ui"
+    "ui",
+    "modal",
+    "util"
   ],
   "bugs": {
     "email": "leey153@naver.com"
