@@ -150,6 +150,8 @@ toggle을 통한 상태를 관리하기 위한 hook입니다.<br>
 
 ### use
 
+[🔗 useToggle - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-usetoggle--docs)<br>
+
 useToggle의 인수로 Boolean 값을 전달해 초기 상태를 지정할 수 있습니다.<br>
 
 `( default : false )`
@@ -298,7 +300,7 @@ return (
 
 <br>
 
-<!---------------------------------------- useModal ---------------------------------------------->
+<!---------------------------------------- useAwayClick ---------------------------------------------->
 
 <details>
   <summary style="font-size:18px"><b>useAwayClick</b></summary>
@@ -308,6 +310,8 @@ return (
 특정 UI ( 요소 ) 외 다른 UI( 요소 )를 클릭하는 경우에 대해 컨트롤할 수 있는 hook 입니다.
 
 ### use
+
+[🔗 useClickAway - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-useclickaway--docs)<br>
 
 useClickAway hook의 인수로 callback 함수를 전달합니다.<br>
 이후 useClickAway hook이 반환하는 ref를 대상 요소의 ref에 전달홥니다.<br>
@@ -370,6 +374,12 @@ return (
 - **0.0.5** <br>
   **Components** : Modal 추가<br>
   **Hooks** : useModal, useClickAway 추가
+
+- **0.0.8** <br>
+  Storybook 도입
+
+- **0.0.9** <br>
+  Storybook : useToggle, useClickAway
 
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
