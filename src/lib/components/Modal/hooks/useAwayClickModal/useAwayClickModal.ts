@@ -1,8 +1,8 @@
 import { MouseEvent } from "react";
 
-import { useHandleClickModalCallback } from "./useHandleCloseModal.type";
+import { useAwayClickModalCallback } from "./useAwayClickModal.type";
 
-const useHandleClickModal = (onClose: useHandleClickModalCallback) => {
+const useAwayClickModal = (onClose: useAwayClickModalCallback) => {
   const handleCloseModal = ({ target, currentTarget }: MouseEvent) => {
     if (target !== currentTarget) {
       return;
@@ -14,4 +14,4 @@ const useHandleClickModal = (onClose: useHandleClickModalCallback) => {
   return handleCloseModal;
 };
 
-export default useHandleClickModal;
+export default useAwayClickModal;
