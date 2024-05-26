@@ -2,12 +2,13 @@ import { CloseIcon } from "../Icons";
 import * as S from "./Modal.style";
 import { ModalProps } from "./Modal.type";
 import { ModalPortal } from "./components";
-import { useGetModalPosition } from "./hooks";
+import { useGetModalPosition, useHandleCloseModal } from "./hooks";
 
 import { AnimatePresence } from "framer-motion";
 
 const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProps) => {
   const { windowHeight } = useGetModalPosition({ isShow });
+  const handleCloseModal = useHandleCloseModal(onClose);
 
   return (
     <AnimatePresence>
@@ -17,6 +18,7 @@ const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProp
             style={backgroundStyle}
             $zIndex={zIndex}
             $top={windowHeight}
+            onClick={handleCloseModal}
             initial={{
               opacity: 0,
             }}
@@ -42,6 +44,7 @@ const Modal = ({ children, isShow, onClose, backgroundStyle, zIndex }: ModalProp
               }}
             >
               <S.ModalCloseIcon
+                onClick={onClose}
                 whileTap={{
                   scale: 1.2,
                 }}
