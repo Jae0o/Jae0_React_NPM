@@ -1,6 +1,6 @@
 {
   "name": "@jae0brary/react",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "./dist/index.js",
   "exports": {
@@ -41,6 +41,7 @@
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1"
   },
+  "license": "MIT",
   "author": {
     "name": "Jae0",
     "email": "leey153@naver.com",
