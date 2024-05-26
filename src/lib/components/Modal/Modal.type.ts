@@ -10,4 +10,5 @@ export interface ModalProps {
 
   zIndex?: number;
   backgroundStyle?: CSSProperties;
+  modalStyle?: CSSProperties;
 }

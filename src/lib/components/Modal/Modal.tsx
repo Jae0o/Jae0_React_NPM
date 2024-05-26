@@ -13,6 +13,7 @@ const Modal = ({
   hideCloseIcon = false,
   disableAwayClick = false,
   backgroundStyle,
+  modalStyle,
   zIndex,
 }: ModalProps) => {
   const { windowHeight } = useGetModalPosition({ isShow });
@@ -40,6 +41,7 @@ const Modal = ({
           >
             <S.ModalLayout
               $hideIcon={hideCloseIcon}
+              style={modalStyle}
               initial={{
                 opacity: 0,
                 scale: 0,
