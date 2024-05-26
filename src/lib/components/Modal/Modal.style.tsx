@@ -18,3 +18,26 @@ export const ModalBackground = styled(motion.section)<{ $zIndex?: number; $top: 
   overflow: auto;
   z-index: ${({ $zIndex }) => $zIndex || 500};
 `;
+
+export const ModalLayout = styled(motion.article)`
+  padding: 1rem;
+  padding-top: 2rem;
+
+  display: flex;
+  justify-content: end;
+
+  position: relative;
+
+  background-color: #ffffff;
+  border-radius: 1rem;
+`;
+
+export const ModalCloseIcon = styled(motion.i)`
+  width: 1.4rem;
+  height: 1.4rem;
+
+  position: absolute;
+  top: 0.3rem;
+
+  cursor: pointer;
+`;
