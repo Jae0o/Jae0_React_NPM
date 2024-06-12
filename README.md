@@ -380,6 +380,8 @@ return (
 
 - **0.0.9** <br>
   Storybook : useToggle, useClickAway
+- **0.0.11** <br>
+  Modal : 로직 개선
 
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
