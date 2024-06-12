@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const ModalBackground = styled(motion.section)<{ $zIndex?: number; $top: number }>`
+export const ModalBackground = styled(motion.section)<{ $zIndex?: number }>`
   width: 100%;
   height: 100%;
 
@@ -9,8 +9,8 @@ export const ModalBackground = styled(motion.section)<{ $zIndex?: number; $top: 
   align-items: center;
   justify-content: center;
 
-  position: absolute;
-  top: ${({ $top }) => `${$top}px`};
+  position: fixed;
+  top: 0;
   left: 0;
 
   background-color: #23232390;

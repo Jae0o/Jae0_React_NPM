@@ -2,7 +2,7 @@ import { CloseIcon } from "../Icons";
 import * as S from "./Modal.style";
 import { ModalProps } from "./Modal.type";
 import { ModalPortal } from "./components";
-import { useAwayClickModal, useGetModalPosition, useKeydownModal } from "./hooks";
+import { useAwayClickModal, useKeydownModal } from "./hooks";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -16,7 +16,6 @@ const Modal = ({
   modalStyle,
   zIndex,
 }: ModalProps) => {
-  const { windowHeight } = useGetModalPosition({ isShow });
   const handleCloseModal = useAwayClickModal(onClose);
   useKeydownModal({ onClose, isShow, disableAwayClick });
 
@@ -27,7 +26,6 @@ const Modal = ({
           <S.ModalBackground
             style={backgroundStyle}
             $zIndex={zIndex}
-            $top={windowHeight}
             onClick={event => !disableAwayClick && handleCloseModal(event)}
             initial={{
               opacity: 0,
