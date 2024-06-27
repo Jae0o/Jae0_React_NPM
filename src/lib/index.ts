@@ -1,5 +1,6 @@
 /* ------ Components ------- */
 import Modal from "./components/Modal/Modal";
+import Skeleton from "./components/Skeleton/Skeleton";
 
 /* ------ Hooks ------- */
 import useClickAway from "./hooks/useClickAway/useClickAway";
@@ -10,7 +11,9 @@ import useToggle from "./hooks/useToggle/useToggle";
 
 export {
   /* ------ Components ------- */
+
   Modal,
+  Skeleton,
 
   /* ------ Hooks ------- */
   useToggle,
