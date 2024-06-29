@@ -1,4 +1,5 @@
 export interface SkeletonProps {
-  width: number;
-  height: number;
+  width: number | string;
+  height: number | string;
+  radius?: number | string;
 }
