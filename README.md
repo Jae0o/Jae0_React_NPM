@@ -448,6 +448,9 @@ return (
 - **0.0.11** <br>
   Modal : 로직 개선
 
+- **0.0.12** <br>
+  **Components** : Skeleton UI 추가<br>
+
 <!-- <details>
   <summary style="font-size:18px"><b>useToggle</b></summary>
  <hr>
