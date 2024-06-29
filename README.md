@@ -51,7 +51,7 @@ Modal UI를 편하게 사용할 수 있도록 구현한 Modal Component입니다
 
 ### use
 
-[📕 Modal - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-emoaehrcgo.chromatic.com/?path=/docs/components-modal--docs)<br>
+[📕 Modal - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-kmxywolvcl.chromatic.com/?path=/docs/components-modal--docs)<br>
 
 Modal은 `useModal hook`과 함께 사용하여 useModal 내부의 값을 Modal에 전달하여 사용할 수 있습니다.<br>
 
@@ -133,6 +133,67 @@ return (
 
 <br>
 
+<!---------------------------------------- Skeleton ---------------------------------------------->
+
+<details>
+  <summary style="font-size:18px"><b>Skeleton UI</b></summary>
+ <hr>
+ <br>
+
+Skeleton UI를 편하게 만들어 사용할 수 있도록 구현한 Skeleton Component입니다.<br>
+기본적으로 `width`, `height`값을 전달해 원하는 크기의 Skeleton을 만들 수 있습니다.<br>
+( `radius`값을 전달해 radius를 수정할 수 있습니다. )
+
+### use
+
+[📕 Skeleton - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-kmxywolvcl.chromatic.com/?path=/docs/components-skeleton--docs)<br>
+
+- **width Props**에 `string` | `number`를 전달해 너비를 지정합니다.
+- **height Props**에 `string` | `number`를 전달해 높이를 지정합니다.
+
+<br>
+
+```tsx
+import { Skeleton } from "@jae0brary/react";
+
+return (
+  <Modal
+    width={500} // px
+    width="50rem"
+
+    height={300} // px
+    height="30rem"
+
+    // Optional
+    radius={12} // 12px
+    radius="1.2rem"
+  />
+)
+```
+
+### Props
+
+- **width**<br>
+  `string` | `number`를 전달해 너비를 지정합니다.
+- **height**<br>
+  `string` | `number`를 전달해 높이를 지정합니다.
+- **radius ( optional )**<br>
+  `string` | `number`를 전달해 radius를 지정합니다. ( default = 1.2rem )
+
+### type
+
+- **width** : `string` | `number`
+- **height** : `string` | `number`
+
+<br>
+
+- **radius ( optional )** : `boolean` | `number`
+
+ <hr>
+</details>
+
+<br>
+
 <!------- Hooks ---------------------------------------------->
 
 ## Hooks
@@ -150,7 +211,7 @@ toggle을 통한 상태를 관리하기 위한 hook입니다.<br>
 
 ### use
 
-[📕 useToggle - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-usetoggle--docs)<br>
+[📕 useToggle - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-kmxywolvcl.chromatic.com/?path=/docs/hooks-usetoggle--docs)<br>
 
 useToggle의 인수로 Boolean 값을 전달해 초기 상태를 지정할 수 있습니다.<br>
 
@@ -296,8 +357,12 @@ return (
 - **handleCloseModal** : `() => void`
 
  <hr>
+
+ <br>
+ 
 </details>
 
+ <br>
 <br>
 
 <!---------------------------------------- useAwayClick ---------------------------------------------->
@@ -311,7 +376,7 @@ return (
 
 ### use
 
-[📕 useClickAway - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-nicxjyuufq.chromatic.com/?path=/docs/hooks-useclickaway--docs)<br>
+[📕 useClickAway - Storybook 설명서 & 체험](https://66531eb0404c060e28909c53-kmxywolvcl.chromatic.com/?path=/docs/hooks-useclickaway--docs)<br>
 
 useClickAway hook의 인수로 callback 함수를 전달합니다.<br>
 이후 useClickAway hook이 반환하는 ref를 대상 요소의 ref에 전달홥니다.<br>
