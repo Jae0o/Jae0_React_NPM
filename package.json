@@ -75,7 +75,8 @@
     "ui",
     "modal",
     "util",
-    "storybook"
+    "storybook",
+    "skeleton"
   ],
   "bugs": {
     "email": "leey153@naver.com"
