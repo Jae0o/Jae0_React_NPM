@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-import { SetLocalStorage, UseLocalStorage, useLocalStorageProps } from "./useLocalStorage.type";
+import { SetLocalStorage, UseLocalStorage, UseLocalStorageProps } from "./useLocalStorage.type";
 
 /**
  * @function useLocalStorage
@@ -30,7 +30,7 @@ import { SetLocalStorage, UseLocalStorage, useLocalStorageProps } from "./useLoc
  * 전달한 `key`에 해당하는 Local Storage를 제거합니다.
  *
  */
-const useLocalStorage: UseLocalStorage = <T>({ key, initialData }: useLocalStorageProps<T>) => {
+const useLocalStorage: UseLocalStorage = <T>({ key, initialData }: UseLocalStorageProps<T>) => {
   const [data, setData] = useState<T>(() => {
     try {
       const res = localStorage.getItem(key);
