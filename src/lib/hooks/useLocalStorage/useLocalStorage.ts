@@ -56,7 +56,7 @@ const useLocalStorage: UseLocalStorage = <T>({ key, initialData }: UseLocalStora
 
         return newData;
       } catch (e) {
-        console.error(e, "jae0brary session storage hook set error!!");
+        console.error(e, "jae0brary local storage hook set error!!");
         return initialData;
       }
     },
