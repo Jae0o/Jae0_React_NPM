@@ -1,6 +1,7 @@
 /* ------ Components ------- */
 import Modal from "./components/Modal/Modal";
 import Skeleton from "./components/Skeleton/Skeleton";
+import Toast from "./components/Toast/Toast";
 
 /* ------ Hooks ------- */
 import useClickAway from "./hooks/useClickAway/useClickAway";
@@ -14,6 +15,7 @@ export {
 
   Modal,
   Skeleton,
+  Toast,
 
   /* ------ Hooks ------- */
   useToggle,
