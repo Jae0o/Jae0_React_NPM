@@ -4,6 +4,7 @@ import { useToastStore } from "./stores";
 
 const ToastProvider = ({ children, zIndex = 50 }: ToastProviderProps) => {
   const { toastList } = useToastStore();
+
   return (
     <>
       {children}
